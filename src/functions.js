@@ -19,7 +19,7 @@
 */
 
 /**
- * 1) Define a function named `yelling` that takes an array of
+ * X 1) Define a function named `yelling` that takes an array of
  * strings as an argument and returns a new array with all
  * the words forced to uppercase
  *
@@ -30,13 +30,16 @@
 // Uncomment the function below. Then underneath, or replacing, the
 // line "// Your code here", write your implementation code.
 
-// function yelling(words) {
-//   // Your code here
-// }
+function yelling(words) {
+  // Your code here
+
+  const yell = words.map(letter => letter.toUpperCase())
+  return yell
+}
 
 /**
  *
- * 2) Define a function named `doubleTrouble` that takes an array of
+ * X 2) Define a function named `doubleTrouble` that takes an array of
  * numbers as an argument and returns a new array with all
  * the numbers multiplied by 2
  *
@@ -44,12 +47,14 @@
  *
  */
 
-// function doubleTrouble(numbers) {
-//   // Your code here
-// }
+function doubleTrouble(numbers) {
+  // Your code here
+  const multiply = numbers.map(num => num * 2)
+  return multiply
+}
 
 /*
- * 3) Define a function named `stringyIndexes` that takes an array of
+ * X 3) Define a function named `stringyIndexes` that takes an array of
  * strings as an argument and returns a new array with each string
  * suffixed with " is at index X" where X is the index of the element
  *
@@ -57,35 +62,43 @@
  *
  */
 
-// function stringyIndexes(strings) {
-//   // Your code here
-// }
+function stringyIndexes(strings) {
+  // Your code here
+  const index = strings.map(
+    (strings, index) => `${strings} is at index ${index}`
+  )
+  return index
+}
 
 /*
- * 4) Define a function named onlyTheEvenSurvive that accepts an array of
+ * X 4) Define a function named onlyTheEvenSurvive that accepts an array of
  * numbers and returns only the elements that are even
  *
  * NOTE: You may *not* use the `forEach` or `for` method.
  *
  */
 
-// function onlyTheEvenSurvive(numbers) {
-//   // Your code here
-// }
+function onlyTheEvenSurvive(numbers) {
+  // Your code here
+  const evenNumbers = numbers.filter(num => num % 2 === 0)
+  return evenNumbers
+}
 
 /*
- * 5) Define a function onlyTheEvenIndexedSurvive that accepts an array of
+ * X 5) Define a function onlyTheEvenIndexedSurvive that accepts an array of
  * numbers and returns only the elements at indexes that are even
  *
  * NOTE: You may *not* use the `forEach` or `for` method.
  *
  */
 
-// function onlyTheEvenIndexedSurvive(numbers) {
-//   // Your code here
-// }
+function onlyTheEvenIndexedSurvive(numbers) {
+  // Your code here
+  const evenIndex = numbers.filter((numbers, index) => index % 2 === 0)
+  return evenIndex
+}
 
-/*
+/* ???????????????????/
  * 6)  Define a function bestMoviesOfTheYear that accepts an array of
  * movie objects AND a year and returns the names of movies that are
  * from that year AND have a score more than 90
@@ -102,9 +115,12 @@
  *
  */
 
-// function bestMoviesOfTheYear(movieObjectArray) {
-//   // Your code here
-// }
+function bestMoviesOfTheYear(movieObjectArray, years) {
+  // Your code here
+  return movieObjectArray
+    .filter(movie => movie.score >= 90 && movie.year === years)
+    .map(movie => movie.name)
+}
 
 /*
  * 7) Define a function everyoneIsOdd that accepts an array of
@@ -115,9 +131,10 @@
  *
  */
 
-// function everyoneIsOdd(numbers) {
-//   // Your code here
-// }
+function everyoneIsOdd(numbers) {
+  // Your code here
+  return numbers.every(num => num % 2 !== 0)
+}
 
 /*
  * 8) Define a function findTheNeedle that accepts an array of
@@ -128,9 +145,10 @@
  *
  */
 
-// function findTheNeedle(strings) {
-//   // Your code here
-// }
+function findTheNeedle(strings) {
+  // Your code here
+  return strings.find(string => string.includes('needle'))
+}
 
 /*
  * 9) Define a function findTheNeedleIndex that accepts an array of
@@ -141,9 +159,11 @@
  *
  */
 
-// function findTheNeedleIndex(strings) {
-//   // Your code here
-// }
+function findTheNeedleIndex(strings) {
+  // Your code here
+  const needleIndex = strings.findIndex(string => string.includes('needle'))
+  return needleIndex
+}
 
 /*
  *` 10)  Define a function someoneToLove that accepts an array of
@@ -154,9 +174,11 @@
  *
  */
 
-// function someoneToLove(strings) {
-//   // Your code here
-// }
+function someoneToLove(strings) {
+  // Your code here
+  const lengths = strings.some(string => string.length === 4)
+  return lengths
+}
 
 /*
  * 11)  Define a function objectKeys that accepts an object of
